@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">GyeongGiPay</string>
+
+    <string-array name="profile_setting">
+        <item>"사진촬영"</item>
+        <item>"앨범에서 선택"</item>
+        <item>"취소"</item>
+    </string-array>
+
+    <string-array name="home_choice_region">
+        <item>"가평군"</item>
+        <item>"고양시"</item>
+        <item>"과천시"</item>
+        <item>"광명시"</item>
+        <item>"광주시"</item>
+        <item>"구리시"</item>
+        <item>"군포시"</item>
+        <item>"남양주시"</item>
+        <item>"동두천시"</item>
+        <item>"성남시"</item>
+        <item>"수원시"</item>
+        <item>"안산시"</item>
+        <item>"안성시"</item>
+        <item>"안양시"</item>
+        <item>"양주시"</item>
+        <item>"양평시"</item>
+        <item>"여주시"</item>
+        <item>"연천군"</item>
+        <item>"오산시"</item>
+        <item>"용인시"</item>
+        <item>"의왕시"</item>
+        <item>"의정부시"</item>
+        <item>"이천시"</item>
+        <item>"파주시"</item>
+        <item>"평택시"</item>
+        <item>"포천시"</item>
+        <item>"하남시"</item>
+        <item>"화성시"</item>
+    </string-array>
+
+    <string-array name="home_category">
+        <item>"식당"</item>
+        <item>"카페/제과"</item>
+        <item>"문화생활"</item>
+        <item>"숙박/여행"</item>
+        <item>"의류/생활잡화"</item>
+        <item>"서적/문구"</item>
+        <item>"의료/보건"</item>
+        <item>"미용/사우나/세탁소"</item>
+        <item>"편의점/마트/슈퍼"</item>
+        <item>"기타"</item>
+    </string-array>
+
+    <string-array name="item_view_setting">
+        <item>"길찾기"</item>
+        <item>"공유"</item>
+        <item>"수정"</item>
+        <item>"삭제"</item>
+        <item>"취소"</item>
+    </string-array>
+
+
+    <string-array name="home_choice_region2">
+        <item>"가평군"</item>
+        <item>"고양시"</item>
+        <item>"과천시"</item>
+        <item>"광명시"</item>
+        <item>"광주시"</item>
+        <item>"구리시"</item>
+        <item>"군포시"</item>
+        <item>"남양주시"</item>
+        <item>"동두천시"</item>
+        <item>"성남시"</item>
+        <item>"수원시"</item>
+        <item>"안산시"</item>
+        <item>"안성시"</item>
+        <item>"안양시"</item>
+        <item>"양주시"</item>
+        <item>"양평시"</item>
+        <item>"여주시"</item>
+        <item>"연천군"</item>
+        <item>"오산시"</item>
+        <item>"용인시"</item>
+        <item>"의왕시"</item>
+        <item>"의정부시"</item>
+        <item>"이천시"</item>
+        <item>"파주시"</item>
+        <item>"평택시"</item>
+        <item>"포천시"</item>
+        <item>"하남시"</item>
+        <item>"화성시"</item>
+    </string-array>
+
+
+</resources>

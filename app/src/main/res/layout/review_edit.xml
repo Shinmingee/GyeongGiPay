@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DEDABB"
+    android:backgroundTint="#DEDABB">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/review_edit_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <TextView
+            android:id="@+id/review_edit_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/cat"
+            android:hint="타이틀여기여기"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/review_edit_photo_multi_icon"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="bottom|right"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:foregroundTint="#DDFFFFFF"
+                            android:outlineAmbientShadowColor="#5B736F"
+                            android:visibility="invisible"
+                            app:srcCompat="?attr/actionModeCopyDrawable" />
+
+                        <ImageView
+                            android:id="@+id/review_edit_photo"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@android:drawable/ic_menu_camera"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:backgroundTintMode="multiply"
+                            android:scrollbarAlwaysDrawVerticalTrack="false" />
+                    </FrameLayout>
+
+                    <Button
+                        android:id="@+id/review_edit_addphotoBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn"
+                        android:fontFamily="@font/cat"
+                        android:minWidth="88dip"
+                        android:minHeight="20dip"
+                        android:text="사진 수정" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/review_edit_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:focusable="auto"
+                    android:fontFamily="@font/cat"
+                    android:gravity="start|top"
+                    android:hint="리뷰를 작성해주세요 \n (최대 50줄)"
+                    android:inputType="textMultiLine"
+                    android:isScrollContainer="true"
+                    android:maxLines="50" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/top_bottom_outline"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/cat"
+                    android:text="위치"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/review_edit_region_textview"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cat"
+                            android:text="사용지역"
+                            android:textSize="15sp" />
+
+<!--                        <Spinner-->
+<!--                            android:id="@+id/review_edit_region"-->
+<!--                            android:layout_width="125dp"-->
+<!--                            android:layout_height="wrap_content" />-->
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/review_edit_category_textview"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/cat"
+                            android:text="카테고리"
+                            android:textSize="15sp" />
+
+<!--                        <Spinner-->
+<!--                            android:id="@+id/review_edit_category"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content" />-->
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/review_edit_storename"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:fontFamily="@font/cat"
+                            android:hint="매장명을 입력하세요"
+                            android:inputType="textPersonName"
+                            android:textSize="15sp" />
+
+<!--                        <Button-->
+<!--                            android:id="@+id/review_edit_store_searchBtn"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="10dp"-->
+<!--                            android:layout_marginTop="2.5dp"-->
+<!--                            android:layout_marginEnd="10dp"-->
+<!--                            android:layout_marginBottom="2.5dp"-->
+<!--                            android:background="@drawable/btn"-->
+<!--                            android:minWidth="65dip"-->
+<!--                            android:minHeight="30dip"-->
+<!--                            android:text="검색"-->
+<!--                            android:textSize="12sp" />-->
+
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/cat"
+                    android:text="별점"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2">
+
+                    <RatingBar
+                        android:id="@+id/review_edit_ratingBar"
+                        style="@style/Widget.AppCompat.RatingBar.Indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:foregroundGravity="bottom"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:stepSize="0.5"
+                        android:rating="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/review_edit_ok_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="40dp"
+                android:background="@drawable/btn"
+                android:fontFamily="@font/cat"
+                android:minHeight="35dip"
+                android:text="리뷰 수정하기" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

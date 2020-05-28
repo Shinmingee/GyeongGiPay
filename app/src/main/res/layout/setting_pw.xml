@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEDABB"
+    android:backgroundTint="#DEDABB">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/setting_pw_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/setting_pw_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호 수정"
+            android:fontFamily="@font/cat"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#44494F"
+            android:layout_gravity="center"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/outline_round"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/mypage_setting_current_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5sp"
+            android:layout_marginBottom="5sp"
+            android:ems="10"
+            android:fontFamily="@font/cat"
+            android:hint="현재 비밀번호 입력"
+            android:maxWidth="12sp"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/mypage_setting_change_pw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:ems="10"
+            android:fontFamily="@font/cat"
+            android:hint="변경할 비밀번호 입력"
+            android:inputType="textPassword"
+            android:maxWidth="12sp"
+            android:maxLength="12"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:ems="10"
+            android:fontFamily="@font/cat"
+            android:text="비밀번호는 8-12자리 (숫자/영문/특수문자 포함)" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mypage_setting_change_pw_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:ems="10"
+            android:fontFamily="@font/cat"
+            android:hint="변경할 비밀번호 확인"
+            android:inputType="textPassword"
+            android:maxWidth="12sp"
+            android:maxLength="12"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.043"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/setting_pw_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/join_pw_confirm_editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/join_pw_confirm_editText"
+                app:layout_constraintTop_toTopOf="@+id/join_pw_confirm_editText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setting_pw_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/cat"
+        android:minWidth="88dip"
+        android:minHeight="40dip"
+        android:text="변경하기"
+        android:textColor="#44494F"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

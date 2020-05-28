@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DEDABB"
+    android:backgroundTint="#DEDABB">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="경기역화폐 사용처 지역" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/GapyeongBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가평군" />
+
+            <TextView
+                android:id="@+id/GoyangBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="고양시" />
+
+            <TextView
+                android:id="@+id/GwacheonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="과천시" />
+
+            <TextView
+                android:id="@+id/GwangmyeongBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="광명시" />
+
+            <TextView
+                android:id="@+id/GwangjuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="광주시" />
+
+            <TextView
+                android:id="@+id/GuriBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="구리시" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/GunpoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="군포시" />
+
+            <TextView
+                android:id="@+id/NamyangjuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남양주시" />
+
+            <TextView
+                android:id="@+id/DongducheonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="동두천시" />
+
+            <TextView
+                android:id="@+id/BucheonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="부천시" />
+
+            <TextView
+                android:id="@+id/SuwonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수원시" />
+
+            <TextView
+                android:id="@+id/AnsanBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안산시" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/AnseongBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안성시" />
+
+            <TextView
+                android:id="@+id/AnyangBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안양시" />
+
+            <TextView
+                android:id="@+id/YangjuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="양주시" />
+
+            <TextView
+                android:id="@+id/YangpyeonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="양평시" />
+
+            <TextView
+                android:id="@+id/YeojuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여주시" />
+
+            <TextView
+                android:id="@+id/YeoncheonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="연천군" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/OsanBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오산시" />
+
+            <TextView
+                android:id="@+id/YonginBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="용인시" />
+
+            <TextView
+                android:id="@+id/UiwangBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="의왕시" />
+
+            <TextView
+                android:id="@+id/UijeongbuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="의정부시" />
+
+            <TextView
+                android:id="@+id/IncheonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="인천시" />
+
+            <TextView
+                android:id="@+id/PajuBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="파주시" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/PyeongtaekBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="평택시" />
+
+            <TextView
+                android:id="@+id/PocheonBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="포천시" />
+
+            <TextView
+                android:id="@+id/HanamBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="하남시" />
+
+            <TextView
+                android:id="@+id/HwaseongBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="화성시" />
+
+
+        </TableRow>
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="방문 가맹점 정보" />
+
+        <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="방문지역을 선택하세요" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시.군 검색" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
+        </TableRow>
+    </TableLayout>
+
+
+    </TableLayout>
+</LinearLayout>

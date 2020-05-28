@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DEDABB"
+    android:backgroundTint="#DEDABB">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/place_info_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <TextView
+            android:id="@+id/place_info_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/cat"
+            android:hint="타이틀여기여기"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/place_info_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/place_info_infoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2sp"
+            android:background="@drawable/place_info_button"
+            android:fontFamily="@font/cat"
+            android:minHeight="35dip"
+            android:text="정보"
+            android:textColor="#44494F"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/place_info_reviewBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2sp"
+            android:background="@drawable/bottom_navi"
+            android:fontFamily="@font/cat"
+            android:minHeight="35dip"
+            android:text="리뷰보기"
+            android:textColor="#44494F"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/place_info_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/top_outline"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/place_info_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/tableLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+
+                            android:shrinkColumns="*"
+                            android:stretchColumns="*"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                            app:layout_constraintEnd_toEndOf="parent"
+
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/place_info_goMap_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="#DEDABB"
+                                    android:tint="#B4004D40"
+                                    app:srcCompat="@android:drawable/ic_dialog_map" />
+
+                                <ImageButton
+                                    android:id="@+id/place_info_tel_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#DEDABB"
+                                    android:tint="#004D40"
+                                    app:srcCompat="@android:drawable/ic_menu_call" />
+
+                                <ImageView
+                                    android:id="@+id/place_info_bookmark_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/bookmark_outline" />
+
+                                <ImageButton
+                                    android:id="@+id/place_info_share_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#DEDABB"
+                                    android:tint="#004D40"
+                                    app:srcCompat="@android:drawable/ic_menu_share" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/textView24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/cat"
+                                    android:gravity="center"
+                                    android:text="길찾기"
+                                    android:textColor="#004D40" />
+
+                                <TextView
+                                    android:id="@+id/textView25"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/cat"
+                                    android:gravity="center"
+                                    android:text="통화하기"
+                                    android:textColor="#004D40" />
+
+                                <TextView
+                                    android:id="@+id/textView26"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/cat"
+                                    android:gravity="center"
+                                    android:text="저장하기"
+                                    android:textColor="#004D40" />
+
+                                <TextView
+                                    android:id="@+id/textView28"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/cat"
+                                    android:gravity="center"
+                                    android:text="공유하기"
+                                    android:textColor="#004D40" />
+                            </TableRow>
+
+                        </TableLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2sp"
+                            android:layout_centerInParent="true"
+                            android:background="#95A844"
+                            app:layout_constraintBottom_toTopOf="@id/guideline"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tableLayout" />
+
+                        <!--                    <HorizontalScrollView-->
+                        <!--                        android:id="@+id/horizontalScrollView"-->
+                        <!--                        android:layout_width="0dp"-->
+                        <!--                        android:layout_height="0dp"-->
+                        <!--                        android:layout_margin="10dp"-->
+                        <!--                        android:background="@drawable/top_bottom_outline"-->
+                        <!--                        android:fillViewport="false"-->
+                        <!--                        app:layout_constraintBottom_toTopOf="@+id/guideline"-->
+                        <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                        app:layout_constraintTop_toBottomOf="@+id/guideline2">-->
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="match_parent"-->
+                        <!--                            android:orientation="horizontal">-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:id="@+id/imageView10"-->
+                        <!--                                android:layout_width="200dp"-->
+                        <!--                                android:layout_height="150dp"-->
+                        <!--                                app:srcCompat="@drawable/logo_image" />-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:id="@+id/imageView11"-->
+                        <!--                                android:layout_width="200dp"-->
+                        <!--                                android:layout_height="150dp"-->
+                        <!--                                android:layout_weight="1"-->
+                        <!--                                app:srcCompat="@drawable/logo_image" />-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:id="@+id/imageView13"-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:layout_weight="1"-->
+                        <!--                                app:srcCompat="@drawable/logo_image" />-->
+
+                        <!--                        </LinearLayout>-->
+                        <!--                    </HorizontalScrollView>-->
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#004D40"
+                            android:backgroundTint="#004D40"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_begin="90dp" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_begin="85dp" />
+
+                        <!--                    <View-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="2dp"-->
+                        <!--                        android:layout_centerInParent="true"-->
+                        <!--                        android:layout_marginTop="3dp"-->
+                        <!--                        android:background="#95A844"-->
+                        <!--                        app:layout_constraintBottom_toTopOf="@id/imageView14"-->
+                        <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView" />-->
+
+                        <ImageView
+                            android:id="@+id/imageView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintEnd_toStartOf="@+id/textView29"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/guideline"
+                            app:srcCompat="@drawable/map_marker" />
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/cat"
+                            android:text="가맹점 위치"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+                            app:layout_constraintStart_toEndOf="@+id/imageView14"
+                            app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+                        <TextView
+                            android:id="@+id/place_info_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:ems="20"
+                            android:hint="장소의 주소"
+                            android:lines="1"
+                            android:singleLine="false"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+                        <!--                    <com.google.android.gms.maps.MapView-->
+                        <!--                        android:id="@+id/place_info_mapView"-->
+                        <!--                        android:layout_width="0dp"-->
+                        <!--                        android:layout_height="0dp"-->
+                        <!--                        android:layout_marginStart="20dp"-->
+                        <!--                        android:layout_marginTop="10dp"-->
+                        <!--                        android:layout_marginEnd="20dp"-->
+                        <!--                        app:layout_constraintBottom_toTopOf="@+id/guideline4"-->
+                        <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                        <!--                        app:layout_constraintTop_toBottomOf="@+id/place_info_address" />-->
+<!--                        <ImageView-->
+<!--                            android:id="@+id/place_info_mapView"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="0dp"-->
+<!--                            android:layout_marginStart="20dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_marginEnd="20dp"-->
+<!--                            app:layout_constraintBottom_toTopOf="@+id/guideline4"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/place_info_address" />-->
+
+
+                        <fragment
+                            android:id="@+id/place_info_mapView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="5dp"
+                            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/place_info_address"
+                            app:layout_constraintVertical_bias="1.0"
+                            tools:context=".PlaceInfoActivity"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
+<!--                        <com.google.android.gms.maps.MapView-->
+<!--                            android:id="@+id/place_info_mapView"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="0dp"-->
+<!--                            android:layout_marginStart="20dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_marginEnd="20dp"-->
+<!--                            android:layout_marginBottom="5dp"-->
+<!--                            app:layout_constraintBottom_toTopOf="@+id/guideline4"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintHorizontal_bias="1.0"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toBottomOf="@+id/place_info_address"-->
+<!--                            app:layout_constraintVertical_bias="1.0" />-->
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_begin="370dp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="3dp"
+                            android:background="#95A844"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/place_info_mapView" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/place_info_mapView">
+
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginTop="10sp"
+                                android:fontFamily="@font/cat"
+                                android:text="리뷰"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/place_info_rating_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:fontFamily="@font/cat"
+                                    android:hint="3.5"
+                                    android:textSize="35sp"
+                                    android:textStyle="bold" />
+
+                                <RatingBar
+                                    android:id="@+id/ratingBar"
+                                    style="@style/Widget.AppCompat.RatingBar.Small"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="3dp"
+                                    android:numStars="5" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/place_info_recyclerview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+<!--                            <LinearLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                android:padding="10dp">-->
+
+<!--                                <LinearLayout-->
+<!--                                    android:id="@+id/place_info_reivew_item"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:background="@drawable/top_bottom_outline"-->
+<!--                                    android:orientation="vertical"-->
+<!--                                    android:paddingLeft="15dp"-->
+<!--                                    android:paddingTop="10dp"-->
+<!--                                    android:paddingRight="15dp"-->
+<!--                                    android:paddingBottom="10dp">-->
+
+<!--                                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content">-->
+
+<!--                                        <ImageView-->
+<!--                                            android:id="@+id/place_info_profile"-->
+<!--                                            android:layout_width="40dp"-->
+<!--                                            android:layout_height="40dp"-->
+<!--                                            android:layout_marginEnd="5dp"-->
+<!--                                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                            app:layout_constraintEnd_toStartOf="@+id/place_info_item_nickname"-->
+<!--                                            app:layout_constraintHorizontal_bias="0.0"-->
+<!--                                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                                            app:srcCompat="@drawable/bottom_mypage" />-->
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/place_info_item_nickname"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:layout_marginStart="5dp"-->
+<!--                                            android:fontFamily="@font/cat"-->
+<!--                                            android:gravity="right"-->
+<!--                                            android:hint="닉네임"-->
+<!--                                            android:textSize="16sp"-->
+<!--                                            android:textStyle="bold"-->
+<!--                                            app:layout_constraintBottom_toTopOf="@+id/place_info_item_star_score"-->
+<!--                                            app:layout_constraintStart_toEndOf="@+id/place_info_profile"-->
+<!--                                            app:layout_constraintTop_toTopOf="@+id/place_info_profile" />-->
+
+<!--                                        <ImageView-->
+<!--                                            android:id="@+id/place_info_item_setting_btn"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:layout_marginEnd="20dp"-->
+<!--                                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                            app:layout_constraintTop_toTopOf="parent"-->
+<!--                                            app:srcCompat="@drawable/dot33" />-->
+
+<!--                                        <ImageView-->
+<!--                                            android:id="@+id/place_info_imageView2"-->
+<!--                                            android:layout_width="15dp"-->
+<!--                                            android:layout_height="15dp"-->
+<!--                                            android:layout_gravity="center_vertical"-->
+<!--                                            android:layout_marginStart="5dp"-->
+<!--                                            app:layout_constraintEnd_toStartOf="@+id/place_info_item_star_score"-->
+<!--                                            app:layout_constraintStart_toEndOf="@+id/place_info_profile"-->
+<!--                                            app:layout_constraintTop_toBottomOf="@+id/place_info_item_nickname"-->
+<!--                                            app:srcCompat="@drawable/star" />-->
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/place_info_item_star_score"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:layout_weight="1"-->
+<!--                                            android:fontFamily="@font/cat"-->
+<!--                                            android:text="4.5"-->
+<!--                                            android:textColor="#D3B144"-->
+<!--                                            android:textSize="15sp"-->
+<!--                                            app:layout_constraintBottom_toBottomOf="@+id/place_info_imageView2"-->
+<!--                                            app:layout_constraintStart_toEndOf="@+id/place_info_imageView2"-->
+<!--                                            app:layout_constraintTop_toTopOf="@+id/place_info_imageView2" />-->
+
+<!--                                        <TextView-->
+<!--                                            android:id="@+id/place_info_date"-->
+<!--                                            android:layout_width="wrap_content"-->
+<!--                                            android:layout_height="wrap_content"-->
+<!--                                            android:layout_marginStart="5dp"-->
+<!--                                            android:layout_marginBottom="3dp"-->
+<!--                                            android:fontFamily="@font/cat"-->
+<!--                                            android:text="2020년 04월 13일"-->
+<!--                                            android:textSize="10sp"-->
+<!--                                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                            app:layout_constraintStart_toEndOf="@+id/place_info_item_star_score" />-->
+
+<!--                                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                                    <LinearLayout-->
+<!--                                        android:layout_width="match_parent"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:orientation="vertical">-->
+
+
+<!--                                        <LinearLayout-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:layout_weight="3"-->
+<!--                                            android:orientation="horizontal">-->
+
+<!--                                            <TextView-->
+<!--                                                android:id="@+id/place_info_item_context"-->
+<!--                                                android:layout_width="wrap_content"-->
+<!--                                                android:layout_height="wrap_content"-->
+<!--                                                android:layout_weight="4"-->
+<!--                                                android:fontFamily="@font/cat"-->
+<!--                                                android:text="리뷰내용 블라블라블라" />-->
+<!--                                        </LinearLayout>-->
+
+<!--                                        <LinearLayout-->
+<!--                                            android:layout_width="match_parent"-->
+<!--                                            android:layout_height="match_parent"-->
+<!--                                            android:gravity="left"-->
+<!--                                            android:orientation="horizontal">-->
+
+<!--                                            <ScrollView-->
+<!--                                                android:layout_width="match_parent"-->
+<!--                                                android:layout_height="match_parent">-->
+
+<!--&lt;!&ndash;                                                <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                    android:layout_height="wrap_content">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                                                    <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        android:id="@+id/place_info_imageView"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        android:layout_width="80dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        android:layout_height="80dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        android:layout_gravity="left"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                        app:srcCompat="@android:drawable/ic_menu_mapmode" />&ndash;&gt;-->
+<!--&lt;!&ndash;                                                </LinearLayout>&ndash;&gt;-->
+<!--                                            </ScrollView>-->
+
+<!--                                        </LinearLayout>-->
+
+<!--                                    </LinearLayout>-->
+
+<!--                                </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/place_info_review_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_outline"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView323"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/cat"
+                    android:text="리뷰"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/place_info_review_rating_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="@font/cat"
+                        android:hint="3.5"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar2"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:numStars="5" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--            <LinearLayout-->
+            <!--                android:id="@+id/place_info_reivew_item2"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@drawable/top_bottom_outline"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingLeft="15dp"-->
+            <!--                android:paddingTop="10dp"-->
+            <!--                android:paddingRight="15dp"-->
+            <!--                android:paddingBottom="10dp">-->
+
+            <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:id="@+id/place_info_review_profile"-->
+            <!--                        android:layout_width="40dp"-->
+            <!--                        android:layout_height="40dp"-->
+            <!--                        android:layout_marginEnd="5dp"-->
+            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                        app:layout_constraintEnd_toStartOf="@+id/place_info_review_item_nickname"-->
+            <!--                        app:layout_constraintHorizontal_bias="0.0"-->
+            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+            <!--                        app:layout_constraintTop_toTopOf="parent"-->
+            <!--                        app:srcCompat="@drawable/bottom_mypage" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/place_info_review_item_nickname"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="5dp"-->
+            <!--                        android:fontFamily="@font/cat"-->
+            <!--                        android:gravity="right"-->
+            <!--                        android:hint="닉네임"-->
+            <!--                        android:textSize="16sp"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        app:layout_constraintBottom_toTopOf="@+id/place_info_review_item_star_score"-->
+            <!--                        app:layout_constraintStart_toEndOf="@+id/place_info_review_profile"-->
+            <!--                        app:layout_constraintTop_toTopOf="@+id/place_info_review_profile" />-->
+
+            <!--                    <ImageView-->
+            <!--                        android:id="@+id/place_info_review_item_setting_btn"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginEnd="20dp"-->
+            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                        app:layout_constraintTop_toTopOf="parent"-->
+            <!--                        app:srcCompat="@drawable/dot33" />-->
+
+            <!--                    <ImageView-->
+            <!--                        android:id="@+id/place_info_review_imageView2"-->
+            <!--                        android:layout_width="15dp"-->
+            <!--                        android:layout_height="15dp"-->
+            <!--                        android:layout_gravity="center_vertical"-->
+            <!--                        android:layout_marginStart="5dp"-->
+            <!--                        app:layout_constraintEnd_toStartOf="@+id/place_info_review_item_star_score"-->
+            <!--                        app:layout_constraintStart_toEndOf="@+id/place_info_review_profile"-->
+            <!--                        app:layout_constraintTop_toBottomOf="@+id/place_info_review_item_nickname"-->
+            <!--                        app:srcCompat="@drawable/star" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/place_info_review_item_star_score"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:fontFamily="@font/cat"-->
+            <!--                        android:text="4.5"-->
+            <!--                        android:textColor="#D3B144"-->
+            <!--                        android:textSize="15sp"-->
+            <!--                        app:layout_constraintBottom_toBottomOf="@+id/place_info_review_imageView2"-->
+            <!--                        app:layout_constraintStart_toEndOf="@+id/place_info_review_imageView2"-->
+            <!--                        app:layout_constraintTop_toTopOf="@+id/place_info_review_imageView2" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:id="@+id/place_info_review_date"-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="5dp"-->
+            <!--                        android:layout_marginBottom="3dp"-->
+            <!--                        android:fontFamily="@font/cat"-->
+            <!--                        android:text="2020년 04월 13일"-->
+            <!--                        android:textSize="10sp"-->
+            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                        app:layout_constraintStart_toEndOf="@+id/place_info_review_item_star_score" />-->
+
+            <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:orientation="vertical">-->
+
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:layout_weight="3"-->
+            <!--                        android:orientation="horizontal">-->
+
+            <!--                        <TextView-->
+            <!--                            android:id="@+id/place_info_review_item_context"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_weight="4"-->
+            <!--                            android:fontFamily="@font/cat"-->
+            <!--                            android:text="리뷰내용 블라블라블라" />-->
+            <!--                    </LinearLayout>-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="match_parent"-->
+            <!--                        android:gravity="left"-->
+            <!--                        android:orientation="horizontal">-->
+
+            <!--                        <ScrollView-->
+            <!--                            android:layout_width="match_parent"-->
+            <!--                            android:layout_height="match_parent">-->
+
+            <!--                            <LinearLayout-->
+            <!--                                android:layout_width="match_parent"-->
+            <!--                                android:layout_height="wrap_content">-->
+
+            <!--                                <ImageView-->
+            <!--                                    android:id="@+id/place_info_review_imageView"-->
+            <!--                                    android:layout_width="80dp"-->
+            <!--                                    android:layout_height="80dp"-->
+            <!--                                    android:layout_gravity="left"-->
+            <!--                                    app:srcCompat="@android:drawable/ic_menu_mapmode" />-->
+            <!--                            </LinearLayout>-->
+            <!--                        </ScrollView>-->
+
+            <!--                    </LinearLayout>-->
+
+            <!--                </LinearLayout>-->
+
+            <!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/place_info_review_recylerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

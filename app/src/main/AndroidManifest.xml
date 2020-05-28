@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gyeonggipay">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoadingPageActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".JoinActivity"></activity>
+        <activity android:name=".JoinSettingInfoActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".PlaceInfoActivity"></activity>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAk1t1TeX4v363fE7WYdj_tSwXyjU__xy8" />
+
+<!--        출처: https://link2me.tistory.com/1700 [소소한 일상 및 업무TIP 다루기]-->
+
+
+        <activity android:name=".ReviewPlaceListActivity"></activity>
+        <activity android:name=".WishPlaceListActivity"></activity>
+        <activity android:name=".ReviewEditActivity"></activity>
+        <activity android:name=".MypageSettingActivity"></activity>
+        <activity android:name=".SettingUserInfoActivity"></activity>
+        <activity android:name=".SettingPwActivity"></activity>
+        <activity android:name=".ReviewImgListSettingActivity"></activity>
+        <activity android:name=".ReviewImgEditActivity"></activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.gyeonggipay"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
+    </application>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera2" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--    앱이 정확한 위치에 액세스하도록 허용합니다.-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--    앱이 대략적인 위치에 액세스하도록 허용합니다.-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+
+</manifest>

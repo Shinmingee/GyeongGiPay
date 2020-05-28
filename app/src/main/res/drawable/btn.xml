@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+        <shape android:shape="rectangle" >
+            <corners android:bottomLeftRadius="30dp" android:bottomRightRadius="30dp" android:topLeftRadius="30dp" android:topRightRadius="30dp" />
+            <stroke
+                android:width="2dp"
+                android:color="#95A844" />
+
+            <solid android:color="#DEDABB" />
+        </shape>
+    </item>
+
+
+    <!--    출처: https://wimir-dev.tistory.com/44 [[위미르 개발팀] Android, iOS , Web 제작]-->
+</selector>

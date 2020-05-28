@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <padding android:bottom="4dp" android:left="8dp" android:right="8dp" android:top="4dp" />
+            <gradient android:angle="270" android:endColor="#4E864F" android:startColor="#4E864F" />
+
+            <corners android:bottomLeftRadius="30dp" android:bottomRightRadius="30dp" android:topLeftRadius="30dp" android:topRightRadius="30dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape>
+            <padding android:bottom="4dp" android:left="8dp" android:right="8dp" android:top="4dp" />
+            <solid android:color="#95A844" />
+            <corners android:bottomLeftRadius="30dp" android:bottomRightRadius="30dp" android:topLeftRadius="30dp" android:topRightRadius="30dp" />
+        </shape>
+    </item>
+
+
+    <!--    출처: https://commin.tistory.com/25 [Commin의 일상코딩]-->
+</selector>
